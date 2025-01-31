@@ -1,0 +1,155 @@
+/* Full-page background styling */
+.signup-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #223D24; /* Dark green background */
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Signup container styling */
+.signup-container {
+    background: #ffffff; /* White container for contrast */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px; /* Restrict max width */
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* Title styling */
+.signup-title {
+    font-size: 32px; /* Slightly larger title font */
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #223D24; /* Dark green for title */
+}
+
+/* Form input styling */
+.signup-form input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #fdfdfd; /* Light off-white background */
+    box-sizing: border-box; /* Consistent sizing */
+}
+
+/* Signup button styling */
+.signup-btn {
+    background-color: #355E3B; /* Dark green button */
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 20px;
+    text-transform: uppercase; /* Consistent case */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.signup-btn:hover {
+    background-color: #2d5234; /* Slightly darker green on hover */
+}
+
+/* Divider styling */
+.divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+    color: #555; /* Subtle gray for divider */
+}
+
+.divider span {
+    flex: 1;
+    height: 1px;
+    background: #ccc; /* Light gray line */
+    margin: 0 10px;
+}
+
+/* Social icons */
+.social-icons {
+    display: flex;
+    flex-direction: column; /* Stack vertically */
+    gap: 15px; /* Spacing between rows */
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* Social login buttons */
+.social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Space between icon and text */
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+    width: 100%; /* Full-width buttons */
+    text-align: center;
+}
+
+.social-btn.google {
+    background-color: #ffdd99; /* Light yellow */
+    color: #4f4f4f; /* Subtle dark text */
+}
+
+.social-btn.google:hover {
+    background-color: #ffcc80; /* Darker yellow */
+}
+
+.social-btn.facebook {
+    background-color: #a8dfc2; /* Light green */
+    color: #355E3B; /* Dark green text */
+}
+
+.social-btn.facebook:hover {
+    background-color: #8fd4b5; /* Darker green */
+}
+
+/* Login prompt */
+.login-prompt {
+    font-size: 14px;
+    color: #555;
+}
+
+.login-link {
+    color: #355E3B; /* Dark green for link */
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.login-link:hover {
+    text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 500px) {
+    .signup-container {
+        padding: 20px;
+        width: 90%;
+    }
+
+    .signup-title {
+        font-size: 28px;
+    }
+
+    .signup-btn {
+        font-size: 16px;
+    }
+}

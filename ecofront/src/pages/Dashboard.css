@@ -1,0 +1,128 @@
+/* Dashboard */
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-image: url("/public/GreenLands.png"); /* Replace with the actual path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #223D24; /* Fallback dark green color */
+}
+
+/* Top Bar */
+.top-bar {
+    background-color: rgba(34, 61, 36, 0.9); /* Slightly transparent for overlay effect */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    z-index: 1000;
+}
+
+.app-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #c1e7c1; /* Light green */
+}
+
+/* Main Content */
+.main-content {
+    margin-top: 100px; /* Space below the top bar */
+    padding: 40px;
+    text-align: center;
+    color: white;
+}
+
+.welcome-title {
+    font-size: 48px; /* Larger title */
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #c1e7c1; /* Light green */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); /* Subtle shadow */
+}
+
+.welcome-text {
+    font-size: 18px;
+    margin-bottom: 60px;
+    color: #c1e7c1;
+}
+
+/* Card Grid */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Flexible cards */
+    gap: 40px; /* Spacing between cards */
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Cards with Staggered Effect */
+.card:nth-child(odd) {
+    transform: translateY(-20px); /* Move odd cards up */
+}
+
+.card:nth-child(even) {
+    transform: translateY(20px); /* Move even cards down */
+}
+
+.card {
+    background-color: #ffffff; /* White background for cards */
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    height: 200px; /* Set height for consistency */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    animation: float 3s ease-in-out infinite; /* Add floating animation */
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.card h3 {
+    font-size: 20px;
+    color: #223D24; /* Dark green */
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 14px;
+    color: #555;
+    text-align: center;
+}
+
+/* Floating Animation for Cards */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0); /* Normal position */
+    }
+    50% {
+        transform: translateY(-10px); /* Move slightly up */
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .card-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+        gap: 20px;
+    }
+
+    .card {
+        height: 180px; /* Adjust height for smaller screens */
+    }
+}
